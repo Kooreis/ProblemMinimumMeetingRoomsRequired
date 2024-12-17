@@ -1,10 +1,5 @@
-import heapq
+for i in range(1, len(intervals)):
+        if meeting_rooms[0] <= intervals[i][0]:
+            heapq.heappop(meeting_rooms)
 
-def min_meeting_rooms(intervals):
-    if not intervals:
-        return 0
-
-    intervals.sort(key=lambda x: x[0])
-
-    meeting_rooms = []
-    heapq.heappush(meeting_rooms, intervals[0][1])
+        heapq.heappush(meeting_rooms, intervals[i][1])
