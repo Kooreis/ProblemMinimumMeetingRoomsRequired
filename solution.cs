@@ -1,9 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-public class Meeting
+public class Program
 {
-    public int Start { get; set; }
-    public int End { get; set; }
-}
+    public static void Main(string[] args)
+    {
+        List<Meeting> meetings = new List<Meeting>
+        {
+            new Meeting { Start = 1, End = 4 },
+            new Meeting { Start = 2, End = 5 },
+            new Meeting { Start = 3, End = 6 }
+        };
+
+        Console.WriteLine(MinMeetingRooms(meetings));
+    }
